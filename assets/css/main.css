@@ -2767,3 +2767,12 @@ section,
   30% { opacity: 0; }  /* Fade out */
   100% { opacity: 0; }
 }
+
+.consultancyname {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;  /* Make it bold */
+  font-size: 3rem;   /* Increase size */
+  text-align: center; /* Center align */
+  color: #333;       /* Dark grey color */
+  margin-top: 50px;
+}

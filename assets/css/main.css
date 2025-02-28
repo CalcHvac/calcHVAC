@@ -2737,6 +2737,7 @@ section,
   width: 100%;
   height: 100%;
   z-index: 1;
+  overflow: hidden;
 }
 
 /* Individual slide images */
@@ -2750,7 +2751,12 @@ section,
   background-position: center;
   opacity: 0;
   animation: fade 30s infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+
 
 /* Assign different animation delays to each slide */
 .slide:nth-child(1) { animation-delay: 0s; }
@@ -2764,11 +2770,10 @@ section,
   0% { opacity: 0; }
   10% { opacity: 1; }  /* Fade in */
   20% { opacity: 1; }  /* Stay visible */
-  30% { opacity: 0; }  /* Fade out */
   100% { opacity: 0; }
 }
 
-.consultancyname {
+.consultancy-name {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;  /* Make it bold */
   font-size: 3rem;   /* Increase size */
@@ -2776,3 +2781,45 @@ section,
   color: #333;       /* Dark grey color */
   margin-top: 50px;
 }
+
+/* Text container */
+/* Text container */
+/* Text container */
+.text-slideshow {
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+/* Individual text slides */
+.text-slide {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden; /* Fully hides the element when not active */
+  font-size: 3em;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  animation: fadeText 30s infinite;
+}
+
+/* Assign different animation delays for each text */
+.text-slide:nth-child(1) { animation-delay: 0s; }
+.text-slide:nth-child(2) { animation-delay: 6s; }
+.text-slide:nth-child(3) { animation-delay: 12s; }
+.text-slide:nth-child(4) { animation-delay: 18s; }
+.text-slide:nth-child(5) { animation-delay: 24s; }
+
+/* Improved Fade-in and Fade-out Animation */
+@keyframes fadeText {
+  0% { opacity: 0; visibility: hidden; } /* Start fully hidden */
+  9% { opacity: 1; visibility: visible; } /* Fade in */
+  20% { opacity: 1; visibility: visible; } /* Stay fully visible */
+  30% { opacity: 0; visibility: hidden; } /* Ensure it disappears before the next text appears */
+  100% { opacity: 0; visibility: hidden; }
+}
+
+
+
